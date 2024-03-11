@@ -1,0 +1,31 @@
+{% extends "./index.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<section class= "botones">
+  <div class="btn-group" role="group" aria-label="Default button group">
+    <a href="?ordering=price_asc" class="btn btn-light">De menor a mayor precio</a>
+    <a href="?ordering=price_desc" class="btn btn-light">De mayor a menor precio</a>
+    <a href="?ordering=year_desc" class="btn btn-light">Más nuevos primeros</a>
+    <a href="?ordering=year_asc" class="btn btn-light">Más viejos primeros</a>
+  </div>
+</section>
+<ul>
+    {% for auto in autos %}
+    <div class="card" style="width: 16rem; display: inline-block; margin-right: 10px;">
+      <div class="card-body">
+        <h4 class="card-title">{{ auto.model }}</h4>
+        <p class="card-text"> {{ auto.year }} | ${{ auto.price|intcomma}}.</p>
+        <img src="..." class="card-img-top" alt="imagen del auto">
+      </div>
+    </div>
+    {% endfor %}
+</ul>
+ 
+{% endblock %}
+
+<div class="card">
+    
+    

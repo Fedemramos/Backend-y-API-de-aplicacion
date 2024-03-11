@@ -1,0 +1,35 @@
+.btn {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,14 @@
+{% extends "./index.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<h3>Ficha tecnica</h3>
+<ul>
+    {% for datos in informacion %}
+    <li>{{ datos.description }} </li>
+    {% endfor %}
+</ul>
+ 
+{% endblock %}
