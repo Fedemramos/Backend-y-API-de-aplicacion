@@ -5,12 +5,20 @@
 {% block content %}
 
 <section class= "botones">
-  <div class="btn-group" role="group" aria-label="Default button group">
-    <a href="?ordering=price_asc" class="btn btn-light">De menor a mayor precio</a>
-    <a href="?ordering=price_desc" class="btn btn-light">De mayor a menor precio</a>
-    <a href="?ordering=year_desc" class="btn btn-light">Más nuevos primeros</a>
-    <a href="?ordering=year_asc" class="btn btn-light">Más viejos primeros</a>
-  </div>
+ <article class="segmentacion">
+    <a href="?segment=Auto">Autos</a>
+    <a href="?segment=SUV,Crossover">SUV y Crossover</a>
+    <a href="?segment=Pickup,Comerciales">Pickups y comerciales</a>
+  </article>
+  <hr>
+  <article>
+    <div class="btn-group" role="group" aria-label="Default button group">
+      <a href="?ordering=price_asc" class="btn btn-light">De menor a mayor precio</a>
+      <a href="?ordering=price_desc" class="btn btn-light">De mayor a menor precio</a>
+      <a href="?ordering=year_desc" class="btn btn-light">Más nuevos primeros</a>
+      <a href="?ordering=year_asc" class="btn btn-light">Más viejos primeros</a>
+    </div>
+  </article>
 </section>
 <ul>
     {% for auto in autos %}
