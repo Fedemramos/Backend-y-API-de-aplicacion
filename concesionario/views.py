@@ -13,6 +13,8 @@ class CarsList(APIView):
 
     def get(self, request):
         ordering = request.query_params.get('ordering', None)
+        segment = request.query_params.get('segment', None)
+        
         queryset = Car.objects.all()
 
         if ordering == 'price_asc':
@@ -24,8 +26,12 @@ class CarsList(APIView):
         elif ordering == 'year_desc':
             queryset = queryset.order_by('-year')
 
+        if segment:
+            segments_list = segment.split(',')
+            queryset = queryset.filter(segment__in=segments_list)
+
+
         serializer = CarSerializer(queryset, many=True)
-        
         return Response({'autos': serializer.data})
 
 class DataCarsList(APIView):
