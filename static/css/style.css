@@ -27,9 +27,28 @@ h2 {
 }
 
 section {
-    margin-bottom: 20px;
+    text-align: center;
+}
+
+.segmentacion{
+    text-align: left;
+}
+
+.segmentacion a {
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 5px 15px; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+    margin: 0 10px; 
+}
+
+.segmentacion a:hover {
+    background-color: #ddd;
 }
 
 hr {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
 }
